@@ -1,0 +1,8 @@
+%syntax-version=1.0.0
+%project=maraicher
+
+init 2022-01-20T10:51:10Z NicoPustovalov <nicolaspust.np@gmail.com> # creation tables
+table_favorite 2022-01-21T08:56:12Z NicoPustovalov <nicolaspust.np@gmail.com> # creation table favorite
+functions 2022-01-21T13:25:41Z NicoPustovalov <nicolaspust.np@gmail.com> # creation of functions
+views2 2022-01-22T19:51:28Z NicoPustovalov <nicolaspust.np@gmail.com> # add views
+index 2022-01-28T13:53:58Z NicoPustovalov <nicolaspust.np@gmail.com> # add index

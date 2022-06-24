@@ -1,0 +1,62 @@
+@host=http://localhost:4500
+
+### Route of test
+GET {{host}}/test
+
+### Add a user
+POST {{host}}/home/registration
+Content-Type: application/json
+
+{  
+    "last_name": "Martind",
+    "first_name": "david",
+    "pseudo":"wvdfxxcd3",
+    "address": "20 Avenue de Ségur",
+    "zip": "75007",
+    "city": "Paris",
+    "mail": "wwww.pxx3v@gMail.fr",
+    "phone": "0111111111",
+    "password": "12345",
+    "role":"pro" 
+}
+
+### Update a user
+PATCH {{host}}/home/writeUserProfile/82
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODIsImlhdCI6MTY0NDQ4OTk1MiwiZXhwIjoxNjQ0NDkzNTUyfQ.QOf9fYp_4YOmSswMSruIOv2s81ffx8CbABvvZZeoXlE
+
+{  
+    "last_name": "Martind",
+    "first_name": "david",
+    "pseudo":"wvdfxxcd3",
+    "address": "20 Avenue de Ségur",
+    "zip": "75007",
+    "city": "Paris",
+    "mail": "wwww.pxx3v@gMail.fr",
+    "phone": "0111111111",
+    "password": "12345",
+    "role":"pro",
+    "id":82
+    
+}
+
+### Login
+POST {{host}}/home/login
+Content-Type: application/json
+
+{
+    "mail": "wwww.phhhfrr3v@gMail.fr",
+    "password": "12345"
+}
+
+### One user
+GET {{host}}/home/users/80
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODAsImlhdCI6MTY0NDQ4MTc4MCwiZXhwIjoxNjQ0NDg1MzgwfQ.rjTkoKepF1MlyYBSqzuKn5zO9HxZArqLkq_gMKUMpFE
+
+### All users
+GET {{host}}/home/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzAsImlhdCI6MTY0NDAyMDEwMiwiZXhwIjoxNjQ0MDIzNzAyfQ.ETPaBUwZnxUyU7TUnC7kmPgEjklZOKns6WX1E6-WO1o
+
+#### Suppression
+DELETE {{host}}/home/users/64
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjQsIm1haWwiOiJ3d3d3d3cucGhAZ21haWwuY29tIiwicm9sZSI6InBybyIsImlhdCI6MTY0NDAwMzY0NywiZXhwIjoxNjQ0MDA3MjQ3fQ.isKZrQw5JN7AacPlnIj5_Gmix35NIQ5fSwE7c409yYg

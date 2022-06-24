@@ -1,0 +1,21 @@
+@host=http://localhost:4500
+
+### Save one favorite
+POST {{host}}/user/favorites/65
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjUsIm1haWwiOiJ3d3d3d3cucGhAZ21haWwuY29tIiwicm9sZSI6InBybyIsImlhdCI6MTY0NDAxMDg4MCwiZXhwIjoxNjQ0MDE0NDgwfQ.DHBdHByJ3ll5fg_EpRLcZqpjuFjtQv0-ud9K8vsuGuE
+
+{
+    "company_id": "3",
+    "user_id": "65"
+}
+
+### All favorites of one user
+GET {{host}}/user/favorites/65
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjUsIm1haWwiOiJ3d3d3d3cucGhAZ21haWwuY29tIiwicm9sZSI6InBybyIsImlhdCI6MTY0NDAxMDg4MCwiZXhwIjoxNjQ0MDE0NDgwfQ.DHBdHByJ3ll5fg_EpRLcZqpjuFjtQv0-ud9K8vsuGuE
+
+        
+
+### Delete one favorite
+DELETE  {{host}}/user/favorites/8/65
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjUsIm1haWwiOiJ3d3d3d3cucGhAZ21haWwuY29tIiwicm9sZSI6InBybyIsImlhdCI6MTY0NDAxMDg4MCwiZXhwIjoxNjQ0MDE0NDgwfQ.DHBdHByJ3ll5fg_EpRLcZqpjuFjtQv0-ud9K8vsuGuE

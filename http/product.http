@@ -1,0 +1,46 @@
+@host=http://localhost:4500
+
+
+### ADD a product
+POST {{host}}/items/7
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywibWFpbCI6Ind3d3cucGhkZGQzdkBnbWFpbC5mciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjQ0MjQxNjkwLCJleHAiOjE2NDQyNDUyOTB9.4wpVosm_gqwlEhhi10SZYwu1HxOquOluFcGEYWe33OU
+
+  {	
+    "type": "legume",
+    "name": "salade",
+    "detail": "ffFFFF sdfsddf", 
+    "price_kg": "false",
+    "price": "4.58",
+    "image": "link",
+    "company_id":1
+}
+
+### Update a product
+POST {{host}}/items/3
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibWFpbCI6Ind3d3cucGhkdkBnbWFpbC5mciIsInJvbGUiOiJwcm8iLCJpYXQiOjE2NDQyMzc1NjgsImV4cCI6MTY0NDI0MTE2OH0.mJPDg7wfHRaMf9rmgl89yUxedxLw8PiQqZ-OaHegCO8
+
+  {	
+    "type": "legume",
+    "name": "salade",
+    "detail": "ffFFFF sdfsddf", 
+    "price_kg": "false",
+    "price": "4.50",
+    "image": "zzz",
+    "company_id":1,
+    "id":6
+}
+
+### One product
+GET {{host}}/items/14 http/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ0MjI4NTAxLCJleHAiOjE2NDQyMzIxMDF9.QxjsTCwAovo1cioQL1ya5y1zactC9mbvhlGMo6hOPPs
+
+#### Delete a product
+DELETE {{host}}/items/2/1 http/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ0MjI4NTAxLCJleHAiOjE2NDQyMzIxMDF9.QxjsTCwAovo1cioQL1ya5y1zactC9mbvhlGMo6hOPPs
+
+
+
+
+

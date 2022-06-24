@@ -1,0 +1,70 @@
+@host=http://localhost:4500
+
+### Add a company
+POST {{host}}/companies/82
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODIsImlhdCI6MTY0NDQ4OTk1MiwiZXhwIjoxNjQ0NDkzNTUyfQ.QOf9fYp_4YOmSswMSruIOv2s81ffx8CbABvvZZeoXlE
+
+  {	
+    "name": "Maraîchedrs Nantai",
+    "siret": "262537450",
+    "address": "20 Avenue de Ségur",
+    "city": "paris",
+    "zip": "24000",
+    "phone": "0622222222",
+    "mail": "tgdf.pakk@gmail.com",
+    "image": "ffsfs444",
+    "detail": "eddfdfgfs",
+    "communication": "bla 4fjrjr",
+    "user_id": 82
+
+   }
+
+### Update a company
+POST  {{host}}/companies/80
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODIsImlhdCI6MTY0NDQ4OTk1MiwiZXhwIjoxNjQ0NDkzNTUyfQ.QOf9fYp_4YOmSswMSruIOv2s81ffx8CbABvvZZeoXlE
+
+  {	
+    "name": "Maraîchedrs Nantai",
+    "siret": "262037450",
+    "address": "7 rue de la gare",
+    "city": "nantes",
+    "zip": "24000",
+    "phone": "0622222222",
+    "mail": "tgdf.pah@gmail.com",
+    "image": "ffsfs444",
+    "detail": "eddfdfgfs",
+    "communication": "bla 4fjrjr",
+    "user_id": 80,
+    "id":82
+   }
+
+
+
+### One company
+GET {{host}}/companies/82 http/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODAsIm1haWwiOiJ3d3d3LnBoaGhmcnIzdkBnbWFpbC5mciIsInJvbGUiOiJwcm8iLCJpYXQiOjE2NDQ0ODUwODEsImV4cCI6MTY0NDQ4ODY4MX0.1CL3rU_8Hnw5hJ8Anx6C3ar2R8-gnRMVyvFHjHCcoS8
+
+### One company by user id
+GET {{host}}/companybyuser/80 http/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODAsIm1haWwiOiJ3d3d3LnBoaGhmcnIzdkBnbWFpbC5mciIsInJvbGUiOiJwcm8iLCJpYXQiOjE2NDQ0ODUwODEsImV4cCI6MTY0NDQ4ODY4MX0.1CL3rU_8Hnw5hJ8Anx6C3ar2R8-gnRMVyvFHjHCcoS8
+
+### All companys
+GET {{host}}/companies
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzAsImlhdCI6MTY0NDAyMDEwMiwiZXhwIjoxNjQ0MDIzNzAyfQ.ETPaBUwZnxUyU7TUnC7kmPgEjklZOKns6WX1E6-WO1o
+
+
+### One company by user id
+GET {{host}}/research/companies http/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzMsIm1haWwiOiJ3d3d3LnBoZGRkM3ZAZ21haWwuZnIiLCJyb2xlIjoicHJvIiwiaWF0IjoxNjQ0NDE5Mjc3LCJleHAiOjE2NDQ0MjI4Nzd9.VVilUuF2S934vFSmyYlaQWvX59fnP6vpIlH81bF22tU
+
+
+#### Delete a company
+DELETE {{host}}/companies/65
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjUsIm1haWwiOiJ3d3d3d3cucGhAZ21haWwuY29tIiwicm9sZSI6InBybyIsImlhdCI6MTY0NDAxMDg4MCwiZXhwIjoxNjQ0MDE0NDgwfQ.DHBdHByJ3ll5fg_EpRLcZqpjuFjtQv0-ud9K8vsuGuE
+
+### Count company
+GET {{host}}/company/count
+
+
