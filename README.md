@@ -61,7 +61,7 @@ Configurer PostgreSQL (ou fournir les variables d'environnement nécessaires) po
 Afin de mettre en place quelques données de test, lancer
 
 ```bash
-node data/seedingScript2.js
+node data/seedingScript.js
 ```
 
 ## Lancement
